@@ -1,5 +1,6 @@
-import React from 'react';
-import BlogPostCard from './BlogPostCard'; // Import the BlogPostCard component
+// app/components/BlogList.tsx
+import React from "react";
+import BlogPostCard from "./BlogPostCard";
 
 interface BlogListProps {
   blogs: {
@@ -12,8 +13,8 @@ interface BlogListProps {
 
 const BlogList: React.FC<BlogListProps> = ({ blogs }) => {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-      {blogs.map((blog, index) => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-white bg-slate-600">
+      {blogs.map((blog) => (
         <BlogPostCard
           key={blog.id}
           id={blog.id}
