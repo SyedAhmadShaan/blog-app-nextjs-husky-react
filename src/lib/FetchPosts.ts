@@ -1,5 +1,7 @@
 export const FetchPosts = async () => {
-  const response = await fetch("https://dev.to/api/articles");
+  const response = await fetch("https://dev.to/api/articles", {
+    cache: "no-store",
+  });
   if (!response.ok) {
     throw new Error("Failed to fetch posts");
   }
